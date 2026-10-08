@@ -1,0 +1,53 @@
+===== Stage 2: one row =====
+[ ][ ][X][ ][X][ ][ ][X][ ][ ]
+Size of one int: 4 bytes
+Address formula for seat[4]: match (16 bytes after seat[0])
+Booking seat 4 again is refused
+===== Stage 3: waitlist =====
+Start:        1012 1005 1033 
+Insert 1020:  1012 1020 1005 1033 
+  moves recorded: 3 (2 shifts + 1 write)
+Delete pos 2: 1012 1020 1033 
+Invalid position
+===== Stage 4: linear search =====
+[X][X][X][X][X][ ][ ][X][ ][ ]
+First free seat: 5 found after 6 checks
+===== Stage 5: sorting =====
+Unsorted:  1047 1003 1029 1011 1052 1018 1036 1008 
+Bubble:    1003 1008 1011 1018 1029 1036 1047 1052 
+  comparisons: 28, swaps: 15
+Selection: 1003 1008 1011 1018 1029 1036 1047 1052 
+  comparisons: 28, swaps: 7
+Insertion: 1003 1008 1011 1018 1029 1036 1047 1052 
+  comparisons: 21, shifts and drops: 22
+===== Stage 6: binary search =====
+Binary: 1047 at index 6 after 3 checks
+Linear: 1047 at index 6 after 7 checks
+Binary: 1050 gives -1 after 4 checks
+Binary on UNSORTED list: 1047 gives -1
+===== Stage 7: merging =====
+Merged: 1003 1008 1011 1018 1029 1036 1047 1052 
+===== Stage 8: full hall =====
+Row 0: [ ][ ][ ][X][ ][ ][ ][ ][ ][ ]
+Row 1: [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+Row 2: [ ][ ][ ][X][X][ ][ ][ ][ ][ ]
+Row 3: [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+Row 4: [ ][ ][ ][ ][ ][ ][ ][ ][ ][X]
+Booked seats: 4
+hall[2][3] is 92 bytes after hall[0][0]
+Row-major formula: match
+Column-major offset would be 68 bytes
+Hand duel, Base 2000, w 4: row-major 2092, column-major 2068
+===== Stage 9: customer names =====
+Aman has 4 letters
+Simran has 6 letters
+Harpreet has 8 letters
+Simran found at index 1
+Rahul found at index -1
+simran (small s) found at index -1
+Ticket name: HARPREET
+===== Stage 10: complexity =====
+n = 10: linear 10 checks, binary 4 checks
+n = 100: linear 100 checks, binary 7 checks
+n = 1000: linear 1000 checks, binary 10 checks
+Free seats by scanning (O(n)): 4 after 10 checks
